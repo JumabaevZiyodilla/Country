@@ -1,0 +1,118 @@
+.belgium {
+    padding: 40px 0px 62px 0px;
+}
+.belgium-link{
+    display: inline-flex;
+    align-items: center;
+    padding: 6px 23px 6px 24px;
+    margin-bottom: 70px;
+    color: #111517;
+    background: #FFFFFF;
+box-shadow: 0px 0px 7px rgba(0, 0, 0, 0.293139);
+border-radius: 2px;
+    &::before{
+        width: 20px;
+        height: 20px;
+        margin-right: 9px;
+        background-image: url("../../images/back.svg");
+        content: "";
+    }
+}
+
+.belgium-img{
+    width: 100%;
+    height: 100%;
+    margin-bottom: 40px;
+}
+.belgium-adress-box {
+    margin-bottom: 32px;
+}
+.belgium-title {
+    margin: 0px 0px 16px 0px;
+    font-size: 22px;
+    line-height: 30px;
+    font-weight: 800;
+color: var(--text-color);
+}
+.belgium-adress {
+    margin: 0px;
+    font-weight: 600;
+font-size: 14px;
+line-height: 32px;
+color: var(--text-color);
+}
+.belgium-text {
+    display: inline-block;
+    margin: 0px;
+    font-weight: 300;
+}
+.belgium-adress-title{
+    font-weight: 600;
+font-size: 16px;
+line-height: 24px;
+color: var(--text-color);
+}
+.belgium-btn-box{
+    display: flex;
+    justify-content: space-between;
+}
+.belgium-btn {
+    padding: 6px 18px;
+    font-size: 12px;
+    line-height: 16px;
+    font-weight: 300;
+color: #111517;
+background: #FFFFFF;
+box-shadow: 0px 0px 4px 1px rgba(0, 0, 0, 0.104931);
+border-radius: 2px;
+}  
+@media only screen and (min-width: 400px){
+    .belgium-btn{
+        padding: 6px 30px;
+    }
+}
+@media only screen and (min-width: 700px){
+    .belgium-img{
+        width: 560px;
+        height: 401px;
+        margin: 0 auto;
+    }
+    .belgium-box{
+        margin-bottom: 68px;
+    }
+    .belgium-link-box{
+        display: flex;
+        align-items: center;
+    }
+    .belgium-adress-title{
+        margin-right: 18px;
+    }
+    .belgium-btn-box{
+        justify-content: start;
+    }
+    .belgium-btn{
+        margin-right: 10px;
+    }
+}
+@media only screen and (min-width: 1024px){
+    .belgium-wrap{
+        display: flex;
+        justify-content: space-between;
+    }
+    .belgium-box{
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+    }
+    .belgium-adress-box{
+        &:first-child{
+            margin-right: 100px;
+        }
+    }
+    .belgium-link-box{
+        position: relative;
+        right: -773px;
+        top: -50px;
+    }
+
+}

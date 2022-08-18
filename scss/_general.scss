@@ -1,4 +1,9 @@
 /* GENERAL */
+:root{
+    --header-bgcolor:#fff;
+    --body-bgcolor:#f2f2f2;
+    --text-color:#111517;
+}
 html {
 	height: 100%;
 	scroll-behavior: smooth;
@@ -21,7 +26,14 @@ body {
 	margin: 0;
 	font-family: "Nunito Sans", "Arial", sans-serif;
     font-weight: 600;
-	background-color: #f2f2f2;
+	background-color: var(--body-bgcolor);
+	color: var(--text-color);
+	transition: background-color 0.5s ease, color 0.5s ease;
+}
+.theme-dark {
+    --header-bgcolor: #2B3844;
+    --text-color: #fff;
+    --body-bgcolor: #202C36;
 }
 main{
 	flex-grow: 1;

@@ -1,6 +1,8 @@
 /* HEADER START */
 .site-header {
-    background: #FFFFFF;
+    background-color: var(--header-bgcolor);
+    color: var(--text-color);
+    transition: background-color 0.5s ease, color 0.5s ease;
     box-shadow: 0px 2px 4px #0000000e;
 }
 
@@ -13,9 +15,9 @@
 
 .header-link {
     font-weight: 800;
-font-size: 14px;
-line-height: 20px;
-color: #111517;
+    font-size: 14px;
+    line-height: 20px;
+    color: var(--text-color);
 }
 
 .header-btn {
@@ -25,7 +27,7 @@ color: #111517;
     font-size: 12px;
     font-weight: 600;
     line-height: 16px;
-    color: #111517;
+    color: var(--text-color);
 
     &::before {
         width: 12px;
@@ -35,6 +37,18 @@ color: #111517;
         background-repeat: no-repeat;
         background-size: contain;
         content: "";
+    }
+}
+
+@media only screen and (min-width: 578px) {
+    .header-link {
+        font-size: 24px;
+        line-height: 33px;
+    }
+
+    .header-btn {
+        font-size: 16px;
+        line-height: 22px;
     }
 }
 
