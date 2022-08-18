@@ -1,0 +1,86 @@
+/* MIXINS */
+@mixin list-rest {
+  margin: 0;
+  padding: 0;
+  list-style-type: none;
+}
+
+@mixin box ($width, $height, $color) {
+  width:$width;
+  height:$height ;
+  background-color:$color ;
+}
+
+@mixin boxing ($width:400px, $height:300px, $color:red) {
+  width:$width;
+  height:$height ;
+  background-color:$color ;
+}
+
+@mixin text-ellipses {
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+}
+
+@mixin display-justfiy-alain ($content:flex ,$centr:space-between,$middle:center) {
+  display: $content;
+  justify-content:$centr ;
+  align-items:$middle ;
+}
+
+@mixin mobile-first($min){
+  @media only screen and (min-width: $min) {
+    @content;
+  }
+}
+
+@mixin min-max($min, $max){
+  @media only screen and (min-width: $min) and (max-width: $max) {
+    @content;
+  }
+}
+@mixin flexbox($justify:space-between, $align:center, $direction){
+  display: flex;
+  justify-content: $justify;
+  align-items: $align;
+  flex-direction: $direction;
+}
+%button-unstyle{
+  background-color: transparent;
+  border: none;
+}
+@mixin link-unstyle($display:inline-block) {
+  display: $display;
+  text-decoration: none;
+}
+@mixin psevdoelements($display:inline-block, $width, $height, $content: ""){
+  display: $display;
+  width: $width;
+  height: $height;
+  content: $content;
+}
+@mixin  bgRetinaImages{
+  @media
+  only screen and (-webkit-min-device-pixel-ratio: 2),
+  only screen and (   min--moz-device-pixel-ratio: 2),
+  only screen and (     -o-min-device-pixel-ratio: 2/1),
+  only screen and (        min-device-pixel-ratio: 2),
+  only screen and (                min-resolution: 192dpi),
+  only screen and (                min-resolution: 2dppx) {
+    @content;
+  }
+}
+@mixin typography-styles($style:normal, $size:16px, $line-height:1.15,$weight:400, $text-align:left, $color:#000) {
+  font-style: $style;
+  font-size: $size;
+  line-height: $line-height;
+  font-weight: $weight;
+  text-align: $text-align;
+  color: $color;
+}
+%text-end{
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+}
