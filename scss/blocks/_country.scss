@@ -1,0 +1,110 @@
+/* FORM START */
+.country {
+    padding: 24px 0px 65px 0px;
+}
+
+.country-form {
+    width: 100%;
+    margin-bottom: 32px;
+}
+
+.label-search {
+    position: relative;
+    width: 100%;
+    margin-bottom: 40px;
+
+    &::before {
+        position: absolute;
+        width: 20px;
+        height: 20px;
+        top: 20px;
+        left: 36px;
+        background-image: url("../images/search-icon.svg");
+        background-repeat: no-repeat;
+        content: "";
+    }
+}
+
+.input-search {
+    width: 100%;
+    padding: 14px 74px;
+    font-size: 12px;
+    line-height: 20px;
+    font-weight: 400;
+    color: #000;
+    background: #FFFFFF;
+    box-shadow: 0px 2px 9px rgba(0, 0, 0, 0.0532439);
+    border-color: transparent;
+    border-radius: 5px;
+
+    &::placeholder {
+        color: #848484;
+    }
+}
+
+.country-select {
+    position: relative;
+    padding: 14px 91px 14px 24px;
+    border-color: transparent;
+    appearance: none;
+    font-weight: 400;
+    font-size: 14px;
+    line-height: 20px;
+    color: var(--main-color-black-pearl);
+    background-color: #FFFFFF;
+    background-image: url("../images/shape.svg");
+    background-repeat: no-repeat;
+    background-position: calc(50% + 83px);
+    box-shadow: 0px 2px 9px rgba(0, 0, 0, 0.0532439);
+    border-radius: 5px;
+}
+
+/* FORM END */
+.country-item {
+    box-shadow: 0px 0px 7px 2px #00000007;
+    border-radius: 5px;
+}
+.country-item-img{
+    width: 100%;
+}
+.country-item-box {
+    padding: 24px 0px 46px 24px;
+    max-width: 380px;
+    margin: 0 auto;
+}
+
+.country-item-title {
+    margin: 0px;
+    margin-bottom: 16px;
+    font-size: 18px;
+    line-height: 26px;
+    color: var(--main-color-black-pearl);
+}
+
+.country-item-text {
+    margin: 0px;
+    margin-bottom: 8px;
+    font-size: 14px;
+    line-height: 16px;
+    color: var(--main-color-black-pearl);
+}
+@media only screen and (min-width: 576px){
+    .country-list{
+        justify-content: space-between;
+    }
+}
+@media only screen and (min-width: 768px){
+    .country-form{
+        display: flex;
+        justify-content: space-between;
+        align-items: baseline;
+    }
+    .label-search{
+        max-width: 480px;
+    }
+}
+@media only screen and (min-width: 576px){
+    .country-item{
+        max-width: 264px;
+    }
+}
