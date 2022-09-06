@@ -568,6 +568,12 @@ a {
           box-shadow: 0px 0px 7px 2px rgba(0, 0, 0, 0.0274509804);
   border-radius: 5px;
 }
+.country-item:hover {
+  -webkit-box-shadow: 0px 0px 7px 2px rgba(0, 0, 0, 0.4117647059);
+          box-shadow: 0px 0px 7px 2px rgba(0, 0, 0, 0.4117647059);
+  -webkit-transition: all 0.3s ease;
+  transition: all 0.3s ease;
+}
 
 .country-item-img {
   width: 100%;
@@ -618,9 +624,10 @@ a {
     max-width: 480px;
   }
 }
-@media only screen and (min-width: 576px) {
+@media only screen and (min-width: 320px) {
   .country-item {
-    max-width: 264px;
+    width: 264px;
+    margin: 0 auto;
   }
 }
 .belgium {
@@ -646,7 +653,7 @@ a {
   width: 20px;
   height: 20px;
   margin-right: 9px;
-  background-image: url("../../images/back.svg");
+  background-image: url("../images/back.svg");
   content: "";
 }
 
@@ -654,10 +661,6 @@ a {
   width: 100%;
   height: 100%;
   margin-bottom: 40px;
-}
-
-.belgium-adress-box {
-  margin-bottom: 32px;
 }
 
 .belgium-title {
@@ -715,7 +718,7 @@ a {
     padding: 6px 30px;
   }
 }
-@media only screen and (min-width: 700px) {
+@media only screen and (min-width: 320px) {
   .belgium-img {
     width: 560px;
     height: 401px;
@@ -743,15 +746,17 @@ a {
   .belgium-btn {
     margin-right: 10px;
   }
+  .belgium-btn:hover {
+    color: #fff;
+    background-color: #202C36;
+    -webkit-transition: all 0.3s ease;
+    transition: all 0.3s ease;
+  }
 }
-@media only screen and (min-width: 1024px) {
-  .belgium-wrap {
-    display: -webkit-box;
-    display: -ms-flexbox;
-    display: flex;
-    -webkit-box-pack: justify;
-        -ms-flex-pack: justify;
-            justify-content: space-between;
+@media only screen and (max-width: 600px) {
+  .belgium-img {
+    width: 100%;
+    height: 100%;
   }
   .belgium-box {
     display: -webkit-box;
@@ -763,14 +768,28 @@ a {
     -webkit-box-align: center;
         -ms-flex-align: center;
             align-items: center;
-  }
-  .belgium-adress-box:first-child {
-    margin-right: 100px;
+    -ms-flex-wrap: wrap;
+        flex-wrap: wrap;
   }
   .belgium-link-box {
-    position: relative;
-    right: -773px;
-    top: -50px;
+    display: block;
+  }
+  .belgium-btn-box {
+    -webkit-box-pack: justify;
+        -ms-flex-pack: justify;
+            justify-content: space-between;
+  }
+}
+@media only screen and (max-width: 1200px) {
+  .row {
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+  }
+  .col-6 {
+    width: 550px;
+    margin: 0 auto;
   }
 }
 /* FOOTER START */
