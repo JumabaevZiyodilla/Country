@@ -6,8 +6,9 @@
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Country</title>
-  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet"
-    integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
+  <!-- CSS only -->
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.3/dist/css/bootstrap.min.css" rel="stylesheet"
+    integrity="sha384-rbsA2VBKQhggwzxH7pPCaAqO46MgnOM80zW1RWuH61DGLwZJEdK2Kadq2F9CUG65" crossorigin="anonymous">
   <link rel="stylesheet" href="./css/main.css">
 </head>
 
@@ -17,7 +18,11 @@
     <div class="container">
       <div class="header-box">
         <a class="header-link" href="./index.html">Where in the world?</a>
-        <button class="header-btn" type="button">Dark mode</button>
+        <div class="header-link-box">
+          <a class="header-maps-link" href="./Simple Map/test.html">3d Maps</a>
+          <button class="header-btn" type="button">Dark mode</button>
+          <h2 class="title-time"></h2>
+        </div>
       </div>
     </div>
   </header>
@@ -25,153 +30,92 @@
 
   <!-- MAIN START -->
   <main>
+
     <!-- SECTION START -->
     <section class="country">
       <h1 class="visually-hidden">Country</h1>
       <h2 class="visually-hidden">Country</h2>
       <div class="container">
         <!-- FORM START -->
-        <form class="country-form" action="https://echo.htmlacademy.ru/courses" method="post" autocomplete="off">
-          <label class="label-search">
-            <input class="input-search" type="text" name="user_search" placeholder="Search for a country…">
-          </label>
-          <select class="country-select" name="country">
-            <option class="country-option" value="Filter by Region">Filter by Region</option>
+
+        <form class="country__form" autocomplete="off">
+          <div class="country__search-box">
+            <label class="country__label-search">
+              <input class="country__input-search" type="text" name="user_search" placeholder="Search for a country…">
+            </label>
+            <button class="country__search-btn" type="submit">Search</button>
+          </div>
+          <select class="country__select" name="country">
+            <option class="country-option" value="all">Filter by Region</option>
             <option class="country-option" value="Africa">Africa</option>
-            <option class="country-option" value="America">America</option>
+            <option class="country-option" value="America">Americas</option>
             <option class="country-option" value="Asia">Asia</option>
-            <option class="country-option" value="Europa">Europa</option>
+            <option class="country-option" value="Europe">Europa</option>
             <option class="country-option" value="Oceania">Oceania</option>
+            <option class="country-option" value="Antarctic">Antarctic</option>
           </select>
         </form>
         <!-- FORM END -->
-        <ul class="row gx-2 gy-5 country-list">
-          <li class="col-12 col-sm-6 col-md-6 col-lg-4 col-xl-3 ">
-            <div class="bg-white country-item ">
-              <a href="./belgium.html">
-                <img class="country-item-img" src="./images/germany.svg" width="264" height="160" alt="Germany's flag">
-                <div class="country-item-box">
-                  <h3 class="country-item-title">Germany</h3>
-                  <p class="country-item-text"><strong>Population:</strong> 81,770,900</p>
-                  <p class="country-item-text"><strong>Region:</strong> Europe</p>
-                  <p class="country-item-text"><strong>Capital:</strong> Berlin</p>
-                </div>
-              </a>
-            </div>
-          </li>
-          <li class="col-sm-6 col-md-6 col-lg-4 col-xl-3 ">
-            <div class="bg-white country-item">
-              <a href="./usa.html">
-                <img class="country-item-img" src="./images/usa.png" width="264" height="160"
-                  srcset="./images/usa.png 1x, ./images/usa@2x.png 2x" alt="U.S.A.'s flag">
-                <div class="country-item-box">
-                  <h3 class="country-item-title">United States of America</h3>
-                  <p class="country-item-text"><strong>Population:</strong> 323,947,000</p>
-                  <p class="country-item-text"><strong>Region:</strong> Americas</p>
-                  <p class="country-item-text"><strong>Capital: Washington, D.C.</strong> Berlin</p>
-                </div>
-              </a>
-            </div>
-          </li>
-          <li class="col-sm-6 col-md-6 col-lg-4 col-xl-3">
-            <div class="bg-white country-item">
-              <a href="./brazil.html">
-                <img class="country-item-img" src="./images/brazil.png" width="264" height="160"
-                  srcset="./images/brazil.png 1x, ./images/brazil@2x.png 2x" alt="Brazil's flag">
-                <div class="country-item-box">
-                  <h3 class="country-item-title">Brazil</h3>
-                  <p class="country-item-text"><strong>Population:</strong> 206,135,893</p>
-                  <p class="country-item-text"><strong>Region:</strong> Americas</p>
-                  <p class="country-item-text"><strong>Capital:</strong> Brasília</p>
-                </div>
-              </a>
-            </div>
-          </li>
-          <li class="col-sm-6 col-md-6 col-lg-4 col-xl-3">
-            <div class="bg-white country-item">
-              <a href="./iceland.html">
-                <img class="country-item-img" src="./images/iceland.jpg" width="264" height="160" alt="Iceland's flag">
-                <div class="country-item-box">
-                  <h3 class="country-item-title">Iceland</h3>
-                  <p class="country-item-text"><strong>Population:</strong> 334,300: </p>
-                  <p class="country-item-text"><strong>Region: </strong> Europe</p>
-                  <p class="country-item-text"><strong>Capital:</strong> Reykjavík</p>
-                </div>
-              </a>
-            </div>
-          </li>
-          <li class="col-sm-6 col-md-6 col-lg-4 col-xl-3">
-            <div class="bg-white country-item">
-              <a href="./afghanistan.html">
-                <img class="country-item-img" src="./images/afghanistan.png" width="264" height="160"
-                  srcset="./images/afghanistan.png 1x, ./img/afghanistan-retina.png 2x" alt="Afghanistan's flag">
-                <div class="country-item-box">
-                  <h3 class="country-item-title">Afghanistan</h3>
-                  <p class="country-item-text"><strong>Population:</strong> 27,657,145</p>
-                  <p class="country-item-text"><strong>Region:</strong> Asia</p>
-                  <p class="country-item-text"><strong>Capital:</strong> Kabul</p>
-                </div>
-              </a>
-            </div>
-          </li>
-          <li class="col-sm-6 col-md-6 col-lg-4 col-xl-3">
-            <div class="bg-white country-item">
-              <a href="./aland.html">
-                <img class="country-item-img" src="./images/alandislands.svg" width="264" height="160"
-                  alt="Aland island's flag">
-                <div class="country-item-box">
-                  <h3 class="country-item-title">Åland Islands</h3>
-                  <p class="country-item-text"><strong>Population:</strong> 28,875</p>
-                  <p class="country-item-text"><strong>Region:</strong> Europe</p>
-                  <p class="country-item-text"><strong>Capital:</strong> Mariehamn</p>
-                </div>
-              </a>
-            </div>
-          </li>
-          <li class="col-sm-6 col-md-6 col-lg-4 col-xl-3">
-            <div class="bg-white country-item">
-              <a href="./albania.html">
-                <img class="country-item-img" src="./images/albania.png" width="264" height="160"
-              srcset="./images/albania.png 1x, ./images/albania@2x.png 2x" alt="Albania's flag">
-            <div class="country-item-box">
-              <h3 class="country-item-title">Albania</h3>
-              <p class="country-item-text"><strong>Population:</strong> 2,886,026</p>
-              <p class="country-item-text"><strong>Region:</strong> Europe</p>
-              <p class="country-item-text"><strong>Capital:</strong> Tirana</p>
-            </div>
-              </a>
-            </div>
-          </li>
-          <li class="col-sm-6 col-md-6 col-lg-4 col-xl-3">
-            <div class="bg-white country-item">
-              <a href="./algeria.html">
-                <img class="country-item-img" src="./images/algeria.png" width="264" height="160"
-              srcset="./images/algeria.png 1x, ./images/algeria@2x.png 2x" alt="Algeria's flag">
-            <div class="country-item-box">
-              <h3 class="country-item-title">Algeria</h3>
-              <p class="country-item-text"><strong>Population: </strong> 40,400,000</p>
-              <p class="country-item-text"><strong>Region:</strong> Africa</p>
-              <p class="country-item-text"><strong>Capital: </strong> Algiers</p>
-            </div>
-              </a>
-            </div>
-          </li>
+        <ul class="country-list">
+
         </ul>
       </div>
     </section>
-    <!-- SECTION START -->
-    <!-- MAIN END -->
 
-    <!-- FOOTER START -->
-    <footer class="site-footer">
-      <div class="container">
-        <div class="footer-wrap">
-
+    <!-- MODAL -->
+    <div class="modal fade" id="exampleModal" aria-labelledby="exampleModalLabel" aria-hidden="true">
+      <div class="modal-dialog">
+        <div class="modal-content">
+          <img class="modal__img" width="265" height="160" src="https://picsum.photos/265/160" alt="">
+          <h3 class="modal__title"></h3>
+          <div class="modal__box">
+            <div class="modal__text-box">
+              <p class="modal__region">Region:<span class="modal__region-span"></span></p>
+              <p class="modal__currencies">Currencies:<span class="modal__currencies-span"></span></p>
+              <p class="modal__borders">Borders:<span class="modal__borders-span"></span></p>
+            </div>
+            <div class="modal__info-box">
+              <p class="modal__languages">Languages:<span class="modal__languages-span"></span></p>
+              <p class="modal__subregion">Subregion:<span class="modal__subregion-span"></span></p>
+              <a class="modal__maps" target="blank" href="">Google maps</a>
+            </div>
+          </div>
         </div>
       </div>
-    </footer>
-    <!-- FOOTER END -->
+    </div>
+
+    <!-- TEMPLATE -->
+    <template class="country-list__template">
+      <li class="country-list__item">
+        <img class="country-list__img" src="" width="265" height="160" alt="">
+        <div class="country-list__box">
+          <h3 class="country-list__title"></h3>
+          <div class="country-list__text-box">
+            <strong class="country-list__population-strong">Population:</strong>
+            <p class="country-list__population"></p>
+          </div>
+          <div class="country-list__text-box">
+            <strong class="country-list__region-strong">Region:</strong>
+            <p class="country-list__region"></p>
+          </div>
+          <div class="country-list__text-box">
+            <strong class="country-list__capital-strong">Capital:</strong>
+            <p class="country-list__capital"></p>
+          </div>
+        </div>
+        <button class="btn btn-primary country-list__btn" type="button" data-bs-toggle="modal"
+          data-bs-target="#exampleModal">
+          More info
+        </button>
+
+      </li>
+    </template>
+
   </main>
+  <!-- JavaScript Bundle with Popper -->
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.3/dist/js/bootstrap.bundle.min.js"
+    integrity="sha384-kenU1KFdBIe4zVF0s0G1M5b4hcpxyD9F7jL+jjXkk+Q2h455rYXK/7HAuoJl+0I4" crossorigin="anonymous">
+  </script>
   <script src="./js/main.js"></script>
 </body>
 

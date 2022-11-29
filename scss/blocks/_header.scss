@@ -10,6 +10,7 @@
     display: flex;
     align-items: center;
     justify-content: space-between;
+    
     padding: 23px 0px 24px 0px;
 }
 
@@ -19,7 +20,21 @@
     line-height: 20px;
     color: var(--text-color);
 }
+.header-link-box{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    width: 500px;
+}
 
+.header-maps-link{
+    font-size: 20px;
+    color: var(--text-color);
+    text-shadow: 4px 4px 5px var(--text-color);
+    &:hover{
+        color: var(--text-color);
+    }
+}
 .header-btn {
     display: flex;
     align-items: center;
@@ -30,8 +45,8 @@
     color: var(--text-color);
 
     &::before {
-        width: 12px;
-        height: 11px;
+        width: 15px;
+        height: 14px;
         margin-right: 10px;
         background-image: url("../images/moon-icon.svg");
         background-repeat: no-repeat;
@@ -39,7 +54,16 @@
         content: "";
     }
 }
-
+.title-time {
+    width: 200px;
+    padding: 10px;
+    text-align: center;
+    font-size: 27px;
+    color: var(--text-color);
+    background-color: var(--header-bgcolor);
+    border: 5px solid var(--text-color);
+    border-radius: 10px;
+}
 @media only screen and (min-width: 578px) {
     .header-link {
         font-size: 24px;
